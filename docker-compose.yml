@@ -4,8 +4,8 @@ services:
     container_name: pge-rides-postgres
     environment:
       POSTGRES_DB: pgerides
-      POSTGRES_USER: pgerides
-      POSTGRES_PASSWORD: pgerides123
+      POSTGRES_USER: pgeridesdb
+      POSTGRES_PASSWORD: mydb
     ports:
       - "5432:5432"
     volumes:

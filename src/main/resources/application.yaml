@@ -1,3 +1,25 @@
 spring:
   application:
     name: pge-rides-api
+
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:5432/pgerides
+    username: ${DB_USER:pgeridesdb}
+    password: ${DB_PASSWORD:mydb}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+  rabbitmq:
+    host: ${RABBIT_HOST:localhost}
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+
+management:
+  endpoint:
+    health:
+      show-details: always
